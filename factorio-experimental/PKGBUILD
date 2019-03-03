@@ -1,0 +1,37 @@
+# Maintainer: moviuro <moviuro+archlinux@gmail.com>
+# Contributor: D. Can Celasun <dcelasun[at]gmail[dot]com>
+# Contributor: Sebastien Duthil <duthils@free.fr>
+# Contributor: mickael9 <mickael9@gmail.com>
+pkgname=factorio-experimental
+pkgver=0.17.4
+pkgrel=1
+pkgdesc="A 2D game about building and maintaining factories (experimental branch)."
+arch=('x86_64')
+url="http://www.factorio.com/"
+license=('custom: commercial')
+conflicts=('factorio' 'factorio-demo')
+provides=("factorio=$pkgver")
+depends=('libxcursor' 'gcc-libs' 'alsa-lib' 'libxrandr' 'libxinerama' 'mesa')
+makedepends=('factorio-dl')
+#DLAGENTS+=('factorio::/usr/bin/factorio-dl -o %o %u')
+sha256sums=('408a8fff6a87bfb48da4a4054cba10a868ee3339938c4a6ac3aca13a1545d93f'
+            '5f62aa7763f9ad367a051371bc16f3c174022bb3380eb221ba06bac395bf9815')
+options=(!strip)
+_gamepkg=factorio_alpha_x64_${pkgver}.tar.xz
+source=("${_gamepkg}::factorio://${pkgver}"
+        factorio.desktop)
+# no modifications needed, the executable looks for:
+# - data in /usr/share/factorio
+# - config in ~/.factorio
+package() {
+  cd "${srcdir}/factorio"
+  install -d "${pkgdir}/usr/bin"
+  install -d "${pkgdir}/usr/share/applications"
+  install -d "${pkgdir}/usr/share/factorio"
+  install -d "${pkgdir}/usr/share/licenses/factorio"
+
+  install -m755 "bin/x64/factorio" "${pkgdir}/usr/bin/factorio"
+  cp -lr data/* "${pkgdir}/usr/share/factorio"
+  install -m644 "${srcdir}/factorio.desktop" "${pkgdir}/usr/share/applications/factorio.desktop"
+  install -m644 "${srcdir}/factorio/data/eula.txt" "${pkgdir}/usr/share/licenses/factorio/LICENSE"
+}
