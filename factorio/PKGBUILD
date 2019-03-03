@@ -5,7 +5,7 @@
 pkgname=factorio
 pkgver=0.16.51
 pkgrel=1
-pkgdesc="A 2D game about building and maintaining factories (experimental branch)."
+pkgdesc="A 2D game about building and maintaining factories (stable branch)."
 arch=('x86_64')
 url="http://www.factorio.com/"
 license=('custom: commercial')
