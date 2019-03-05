@@ -12,7 +12,7 @@ license=('custom: commercial')
 conflicts=('factorio-experimental' 'factorio-demo')
 provides=("factorio=$pkgver")
 depends=('libxcursor' 'gcc-libs' 'alsa-lib' 'libxrandr' 'libxinerama' 'mesa')
-makedepends=('factorio-dl')
+# requires aur/factorio-dl or the game file directly next to the PKGBUILD
 #DLAGENTS+=('factorio::/usr/bin/factorio-dl -o %o %u')
 sha256sums=('00f66edd89def056385875826c6163d4982b04afb3159c6e7cb0c0ccda5d902c'
             '5f62aa7763f9ad367a051371bc16f3c174022bb3380eb221ba06bac395bf9815')
