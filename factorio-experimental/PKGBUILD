@@ -17,8 +17,7 @@ depends=('libxcursor' 'gcc-libs' 'alsa-lib' 'libxrandr' 'libxinerama' 'mesa')
 sha256sums=('1d6ba126e65d2eaadd64357f2c4451aa9bfbf4fb4f7fce369108262d3c1170a8'
             '5f62aa7763f9ad367a051371bc16f3c174022bb3380eb221ba06bac395bf9815')
 options=(!strip)
-_gamepkg=factorio_alpha_x64_${pkgver}.tar.xz
-source=("${_gamepkg}::factorio://${pkgver}"
+source=("factorio_alpha_x64_${pkgver}.tar.xz::factorio://${pkgver}"
         factorio.desktop)
 # no modifications needed, the executable looks for:
 # - data in /usr/share/factorio
