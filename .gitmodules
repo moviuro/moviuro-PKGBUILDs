@@ -1,0 +1,27 @@
+[submodule "thiswarofmine-hib"]
+	path = thiswarofmine-hib
+	url = ssh://aur@aur.archlinux.org/thiswarofmine-hib.git
+[submodule "rocketsrocketsrockets-hib"]
+	path = rocketsrocketsrockets-hib
+	url = ssh://aur@aur.archlinux.org/rocketsrocketsrockets-hib.git
+[submodule "towerfall-hib"]
+	path = towerfall-hib
+	url = ssh://aur@aur.archlinux.org/towerfall-hib.git
+[submodule "rocketbirds-hib"]
+	path = rocketbirds-hib
+	url = ssh://aur@aur.archlinux.org/rocketbirds-hib.git
+[submodule "dungeons-2-gog"]
+	path = dungeons-2-gog
+	url = ssh://aur@aur.archlinux.org/dungeons-2-gog.git
+[submodule "shadowrunreturns-gog"]
+	path = shadowrunreturns-gog
+	url = ssh://aur@aur.archlinux.org/shadowrunreturns-gog.git
+[submodule "shadowrundragonfall-gog"]
+	path = shadowrundragonfall-gog
+	url = ssh://aur@aur.archlinux.org/shadowrundragonfall-gog.git
+[submodule "factorio-dl"]
+	path = factorio-dl
+	url = ssh://aur@aur.archlinux.org/factorio-dl.git
+[submodule "butter"]
+	path = butter
+	url = ssh://aur@aur.archlinux.org/butter.git
