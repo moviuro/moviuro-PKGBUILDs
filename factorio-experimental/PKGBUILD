@@ -3,7 +3,7 @@
 # Contributor: Sebastien Duthil <duthils@free.fr>
 # Contributor: mickael9 <mickael9@gmail.com>
 pkgname=factorio-experimental
-pkgver=0.17.15
+pkgver=0.17.16
 pkgrel=1
 pkgdesc="A 2D game about building and maintaining factories (experimental branch)."
 arch=('x86_64')
@@ -14,7 +14,7 @@ provides=("factorio=$pkgver")
 depends=('libxcursor' 'gcc-libs' 'alsa-lib' 'libxrandr' 'libxinerama' 'mesa')
 # requires aur/factorio-dl or the game file directly next to the PKGBUILD
 #DLAGENTS+=('factorio::/usr/bin/factorio-dl -o %o %u')
-sha256sums=('c4a28338486bd95a44ef1f9c1722c8128917f8683a6c6f632e9c398f359d56f9'
+sha256sums=('a847d9d466dfc75730bdf8f9630cdf9380310104fbb1c2405ca246389cf77c87'
             '5f62aa7763f9ad367a051371bc16f3c174022bb3380eb221ba06bac395bf9815')
 options=(!strip)
 source=("factorio_alpha_x64_${pkgver}.tar.xz::factorio://${pkgver}"
