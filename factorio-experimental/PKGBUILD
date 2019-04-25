@@ -17,6 +17,9 @@ depends=('libxcursor' 'gcc-libs' 'alsa-lib' 'libxrandr' 'libxinerama' 'mesa')
 sha256sums=('6949cfdc46c84b4c5e7534703edd661e993a3c58108811ba82e9565fd451bc60'
             '5f62aa7763f9ad367a051371bc16f3c174022bb3380eb221ba06bac395bf9815')
 options=(!strip)
+# disable package compression - 0.17.32 takes around 385s on my i5-6600K@4.1GHz,
+# and decompression takes another 25s, but saves some 200MB (xz -T0)
+PKGEXT='.pkg.tar'
 source=("factorio_alpha_x64_${pkgver}.tar.xz::factorio://${pkgver}"
         factorio.desktop)
 # no modifications needed, the executable looks for:
