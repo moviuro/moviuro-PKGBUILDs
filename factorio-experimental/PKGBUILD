@@ -3,7 +3,7 @@
 # Contributor: Sebastien Duthil <duthils@free.fr>
 # Contributor: mickael9 <mickael9@gmail.com>
 pkgname=factorio-experimental
-pkgver=0.18.34
+pkgver=0.18.35
 pkgrel=1
 pkgdesc="A 2D game about building and maintaining factories (experimental branch)."
 arch=('x86_64')
@@ -14,7 +14,7 @@ provides=("factorio=$pkgver")
 depends=('libxcursor' 'gcc-libs' 'alsa-lib' 'libxrandr' 'libxinerama' 'mesa')
 # requires aur/factorio-dl or the game file directly next to the PKGBUILD
 #DLAGENTS+=('factorio::/usr/bin/factorio-dl -o %o %u')
-sha256sums=('ce4f3b45f5dd00a777e2ee470021ea06f089a7ce4850b529dc38cc6e06c2b0c5'
+sha256sums=('6a52cfa67c8b79dbe5de71b6b86310db9a6e32cc8d1c460c5ed5b5d7fb453883'
             '5f62aa7763f9ad367a051371bc16f3c174022bb3380eb221ba06bac395bf9815')
 options=(!strip)
 # disable package compression - 0.17.32 takes around 385s on my i5-6600K@4.1GHz,
