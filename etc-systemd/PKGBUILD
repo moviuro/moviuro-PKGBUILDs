@@ -1,0 +1,25 @@
+pkgname=etc-systemd
+pkgver=r20.89e64a7
+pkgrel=1
+pkgdesc="moviuro's systemd units"
+arch=('any')
+url="https://gitlab.com/moviuro/$pkgname"
+depends=('systemd')
+optdepends=('sbsignutils')
+source=(git+${url}.git?signed)
+sha256sums=('SKIP')
+validpgpkeys=('2CD96FEE343C6799B9CEAFAD62009A2E0C22D9AB')
+
+pkgver() {
+  cd "$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+  cd "$pkgdir"
+  mkdir -p usr/lib/systemd
+  cd usr/lib/systemd
+  cp -r "$srcdir"/etc-systemd/system .
+  cp -r "$srcdir"/etc-systemd/user .
+  find "$pkgdir" -type f -exec chmod 444 {} \;
+}
