@@ -1,5 +1,5 @@
 pkgname=moviuro.etc-systemd
-pkgver=r24.a136cde
+pkgver=r28.80a3b84
 pkgrel=1
 pkgdesc="moviuro's systemd units"
 arch=('any')
@@ -21,5 +21,6 @@ package() {
   cd usr/lib/systemd
   cp -r "$srcdir"/"$pkgname"/system .
   cp -r "$srcdir"/"$pkgname"/user .
+  cp -r "$srcdir"/"$pkgname"/scripts .
   find "$pkgdir" -type f -exec chmod 444 {} \;
 }
