@@ -21,6 +21,7 @@ package() {
   cd usr/lib/systemd
   cp -r "$srcdir"/"$pkgname"/system .
   cp -r "$srcdir"/"$pkgname"/user .
-  cp -r "$srcdir"/"$pkgname"/scripts .
   find "$pkgdir" -type f -exec chmod 444 {} \;
+  cp -r "$srcdir"/"$pkgname"/scripts .
+  find "$pkgdir"/usr/lib/systemd/scripts -type f -exec chmod 555 {} \;
 }
