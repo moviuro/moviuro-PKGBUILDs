@@ -1,0 +1,26 @@
+pkgname=moviuro.bin
+pkgver=r170.395e722
+pkgrel=1
+pkgdesc="moviuro's scripts"
+arch=('any')
+url="https://git.sr.ht/~moviuro/$pkgname"
+#depends=('')
+optdepends=('sct: for screen color temperature'
+            'curl: for most of the scripts'
+            'jq: for some of the scripts')
+source=(git+${url}?signed)
+sha256sums=('SKIP')
+validpgpkeys=('2CD96FEE343C6799B9CEAFAD62009A2E0C22D9AB')
+
+pkgver() {
+  cd "$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+  mkdir -p "$pkgdir/usr/bin"
+  cp -a "$srcdir/$pkgname/"* "$pkgdir/usr/bin"
+
+  # BSD stuff
+  rm "$pkgdir"/usr/bin/{obsd*,pfdump}
+}
